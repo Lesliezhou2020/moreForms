@@ -16,7 +16,7 @@ const Form = (props) => {
     const firstNameChange = (e) => {
         e.preventDefault();
         setFirstname(e.target.value);
-        if(firstname === undefined || firstname.length < 2) {
+        if(e.target.value === undefined || e.target.value.length < 2) {
             setFirstError("First Name must be at least 2 characters");
         } else {
             setFirstError("");
@@ -26,7 +26,7 @@ const Form = (props) => {
     const lastNameChange = (e) => {
         e.preventDefault();
         setLastname(e.target.value);
-        if(lastname === undefined || lastname.length < 2) {
+        if(e.target.value === undefined || e.target.value.length < 2) {
             setLastError("Last Name must be at least 2 characters");
         } else {
             setLastError("");
@@ -36,7 +36,7 @@ const Form = (props) => {
     const emailChange = (e) => {
         e.preventDefault();
         setEmail(e.target.value);
-        if(email === undefined || email.length < 2) {
+        if(e.target.value === undefined || e.target.value.length < 2) {
             setEmailError("Email must be at least 2 characters");
         } else {
             setEmailError("");
@@ -48,7 +48,7 @@ const Form = (props) => {
         setPassword(e.target.value)
         console.log(password);
         console.log(password.length);
-        if(password === undefined || password.length < 8) {
+        if(e.target.value === undefined || e.target.value.length < 8) {
             setPasswordError("Password must be at least 8 characters");
         } else {
             setPasswordError("");
@@ -60,7 +60,7 @@ const Form = (props) => {
         setConfirmpw(e.target.value);
         console.log(password)
         console.log(confirmpw);
-        if(confirmpw !== password) {
+        if(e.target.value !== password) {
             setConfirmError("Password must match ");
         } else {
             setConfirmError("");
